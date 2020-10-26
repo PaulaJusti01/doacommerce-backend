@@ -14,40 +14,37 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 @EnableWebSecurity
 public class BasicSecurityConfig extends WebSecurityConfigurerAdapter {
 
-	@Autowired
-	private UserDetailsService userDetailService;
+    @Autowired
+    private UserDetailsService userDetailService;
 
-	@Override
-	protected void configure(AuthenticationManagerBuilder auth) throws Exception {
-		auth.userDetailsService(userDetailService);
-	}
+    @Override
+    protected void configure(AuthenticationManagerBuilder auth) throws Exception {
+        auth.userDetailsService(userDetailService);
+    }
 
-	@Bean
-	public PasswordEncoder passwordEncoder() {
-		return new BCryptPasswordEncoder();
-	}
+    @Bean
+    public PasswordEncoder passwordEncoder() {
+        return new BCryptPasswordEncoder();
+    }
 
-	@Override
-	protected void configure(HttpSecurity http) throws Exception {
-		http.authorizeRequests()
-		.antMatchers("/usuarios").permitAll()
-		.antMatchers("/usuarios/logar").permitAll()
-		.antMatchers("/usuarios/cadastrar").permitAll()
-		.antMatchers("/categorias").permitAll()
-		.antMatchers("/categorias/{id}").permitAll()
-		.antMatchers("/produtos").permitAll()
-		.antMatchers("/produtos/{id}").permitAll()
-		.antMatchers("/produtos/urgente/{urgente}").permitAll()
-		.antMatchers("/categorias/categoria/{categoria}").permitAll()
-
-
-
-		.anyRequest()
-		.authenticated().and().httpBasic().and()
-		.sessionManagement()
-		.sessionCreationPolicy(SessionCreationPolicy.STATELESS)
-		.and().cors().and().csrf()
-		.disable();
-
-	}
+    @Override
+    protected void configure(HttpSecurity http) throws Exception {
+        http.authorizeRequests()
+                .antMatchers("/usuarios").permitAll()
+                .antMatchers("/usuarios/logar").permitAll()
+                .antMatchers("/usuarios/cadastrar").permitAll()
+                .antMatchers("/categorias").permitAll()
+                .antMatchers("/categorias/{id}").permitAll()
+                .antMatchers("/produtos").permitAll()
+                .antMatchers("/produtos/{id}").permitAll()
+                .antMatchers("/produtos/urgente/{urgente}").permitAll()
+                .antMatchers("/categorias/categoria/{categoria}").permitAll()
+				.antMatchers("/**").permitAll()
+                .anyRequest()
+                .authenticated().and().httpBasic().and()
+                .sessionManagement()
+                .sessionCreationPolicy(SessionCreationPolicy.STATELESS)
+                .and().cors().and().csrf()
+                .disable();
+    }
 }
