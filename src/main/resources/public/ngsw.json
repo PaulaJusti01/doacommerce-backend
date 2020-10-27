@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1603764380931,
+  "timestamp": 1603765564698,
   "index": "/index.html",
   "assetGroups": [
     {
@@ -13,7 +13,7 @@
       "urls": [
         "/favicon.ico",
         "/index.html",
-        "/main.f6836f942ea514525560.js",
+        "/main.4b54976da04227ea6103.js",
         "/manifest.webmanifest",
         "/polyfills.35a5ca1855eb057f016a.js",
         "/runtime.acf0dec4155e77772545.js",
@@ -147,8 +147,8 @@
     "/assets/sabonete-liquido.svg": "4ac0a818c257fe6a799e72fe6d5b11c2ce1af190",
     "/assets/verificacao.jpg": "7aa3ef401da8bc8151182ffc28d94aec30981e0b",
     "/favicon.ico": "22f6a4a3bcaafafb0254e0f2fa4ceb89e505e8b2",
-    "/index.html": "7227fb9e29986a445352b21e06a7990cbb9a983b",
-    "/main.f6836f942ea514525560.js": "7238e49f0d29ef8e34c71cfcb0fc163fd4fc94f7",
+    "/index.html": "68539e5045b1a2eadb8c6f8537625d7d87b1252a",
+    "/main.4b54976da04227ea6103.js": "6b9fbb02147cba769706d16a16239fcbc4d27579",
     "/manifest.webmanifest": "dc7b3aa935bcccc0d28d65081b228cba055139a6",
     "/polyfills.35a5ca1855eb057f016a.js": "578360d24ce37383f261c7ef63b1f822d28e8dde",
     "/runtime.acf0dec4155e77772545.js": "a9aafcf49f49145093fc831efd9b8e2f6c71bb9c",
